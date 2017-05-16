@@ -4,6 +4,8 @@ html {
   font-family: Helvetica;
 }
 
+/* HEADER */
+
 header {
   background-color: black;
   font-size: 1rem;
@@ -22,12 +24,16 @@ header img {
   align-items: center;
 }
 
+/* BANNER */
+
+
 .mainbanner {
   background-image: url("../images/moto.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 25rem;
+
 
 }
 
@@ -58,6 +64,47 @@ header img {
 
 }
 
+@media only screen and (max-width: 470px) {
+
+  .mainbanner {
+    height: 15rem;
+    width: auto;
+
+  }
+
+  .containerbanner {
+    width: auto;
+    margin: 0 auto;
+
+  }
+
+  .headline {
+
+    width: auto;
+    top: 10rem;
+    position: relative;
+    padding: 1rem 2rem;
+  }
+
+  .headline h4 {
+    font-size: 0.77rem;
+    font-weight: bold;
+
+  }
+
+  .headline h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.25rem 0;
+
+}
+
+}
+
+
+/* NAVIGATION */
+
+
 nav {
   background-color: firebrick;
 
@@ -78,6 +125,28 @@ nav ul {
 nav li {
   display: inline-block;
 }
+
+nav ul.menu-mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+nav ul {
+  display: none;
+}
+
+nav ul.menu-mobile {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 0;
+}
+
+}
+
+
+/* PRODUCTGRID */
 
 .productgrid {
   width: 960px;
@@ -116,6 +185,50 @@ nav li {
   text-align: center;
 }
 
+
+@media only screen and (max-width: 1024px) {
+
+.product {
+  display: none;
+}
+
+.pen, .watch {
+  display: block;
+
+}
+
+.product {
+width: 47%;
+}
+
+}
+
+@media only screen and (max-width: 470px) {
+.productgrid {
+  width: auto;
+}
+
+.products {
+    justify-content: center;
+}
+
+.product {
+  display:none;
+}
+
+.pen {
+  display: block;
+
+}
+
+.product {
+  width: 90%;
+}
+
+}
+
+/* STORE INFO */
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -140,8 +253,25 @@ nav li {
 
 .value {
   color: black;
+}
+
+@media only screen and (max-width: 470px) {
+
+.container {
+  width: auto;
+  }
+
+.location-hours-grid {
+  flex-direction: column;
+}
+
+.info {
+  width: 90%;
+}
 
 }
+
+/* FOOTER */
 
 footer {
   margin-top: 4rem;
@@ -153,4 +283,14 @@ footer {
   width: 960px;
   margin: 0 auto;
   text-align: left;
+}
+
+@media only screen and (max-width: 470px) {
+
+.copyright {
+  width: auto;
+  margin: 0;
+  text-align: center;
+}
+
 }
